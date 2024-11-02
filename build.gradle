@@ -30,10 +30,6 @@ jar {
             .collect { it.isDirectory() ? it : zipTree(it) }
     }
 
-    into("source") {
-        from "src/main/java"
-    }
-
     manifest {
         attributes "Premain-Class": "com.gmail.necnionch.myapp.craftswitcherreportmodule.CraftSwitcherAgent",
                    "Can-Redefine-Classes": true
