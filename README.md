@@ -8,6 +8,7 @@
 
 ## APIを利用するプラグイン
 - [SwitchJoin](https://github.com/Necnion8/SwitchJoin) for BungeeCord
+- [BungeePortal2](https://github.com/Necnion8/BungeePortal2) for Bukkit
 
 ## ライセンス
 - [Javassist](https://github.com/jboss-javassist/javassist) - MPL 1.1
