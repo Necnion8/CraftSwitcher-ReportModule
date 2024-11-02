@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+}
+
+group 'com.gmail.necnionch.myapp'
+version '1.1.3_libs'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // https://mvnrepository.com/artifact/org.javassist/javassist
+    compile group: 'org.javassist', name: 'javassist', version: '3.27.0-GA'
+    implementation files("libs/spigot-1.16.3.jar")
+    implementation files("libs/BungeeCord.jar")
+
+    compile 'com.google.code.gson:gson:2.9.0'
+
+// https://mvnrepository.com/artifact/io.netty/netty-all
+    compile group: 'io.netty', name: 'netty-all', version: '4.1.24.Final'
+
+}
+
+jar {
+    from {
+        configurations.compile
+            .collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    into("source") {
+        from "src/main/java"
+    }
+
+    manifest {
+        attributes "Premain-Class": "com.gmail.necnionch.myapp.craftswitcherreportmodule.CraftSwitcherAgent",
+                   "Can-Redefine-Classes": true
+    }
+
+    exclude("module-info.class")
+    exclude("META-INF/versions/9/module-info.class")
+}
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
