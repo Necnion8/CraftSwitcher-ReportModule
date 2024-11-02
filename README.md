@@ -5,3 +5,8 @@
 ## 非推奨
 - 古いCraftSwitcher(v1)向けです。過去のコードを参照できるように公開しています。
 - メンテナンスされていないため、最近のサーバーで動作しないかもしれません
+
+## ライセンス
+- [Javassist](https://github.com/jboss-javassist/javassist) - MPL 1.1
+- [Gson](https://github.com/google/gson) - Apache License 2.0
+- [netty](https://github.com/netty/netty) - Apache License 2.0
